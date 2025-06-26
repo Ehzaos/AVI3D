@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Visionneuse 3D</title>
+  <style>
+    html, body { height: 100%; margin: 0; }
+    #viewer { width: 100vw; height: 100vh; background: #222; overflow: hidden; }
+    /* Pour la barre d’échelle, etc. */
+    #scale-bar { position: absolute; left: 40px; bottom: 36px; z-index: 10; }
+  </style>
+  
+  <script type="module" crossorigin src="./assets/index.js"></script>
+  <link rel="stylesheet" href="./assets/gui.css">
+</head>
+<body>
+  <div id="viewer"></div>
+  <div id="scale-bar" style="display: flex; align-items: center;">
+    <div id="scale-bar-bar" style="height:4px;background:#fff;border-radius:2px;width:80px;margin-right:8px;"></div>
+    <span id="scale-bar-label" style="color:#fff;font:15px Arial, sans-serif;"></span>
+  </div>
+  
+</body>
+</html>

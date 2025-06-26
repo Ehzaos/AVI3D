@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Visionneuse 3D</title>
+  <style>
+    html, body { height: 100%; margin: 0; }
+    /* Rendre #viewer positionné pour le message */
+    #viewer {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      background: #222;
+      overflow: hidden;
+    }
+    /* Message Drag & Drop centré */
+    #drop-message {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      font: 20px Didot;
+      text-align: center;
+      pointer-events: none;
+      z-index: 5;
+      white-space: pre-line;
+    }
+    /* Barre d’échelle existante */
+    #scale-bar {
+      position: absolute;
+      left: 40px;
+      bottom: 36px;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+    }
+  </style>
+  
+  <script type="module" crossorigin src="./assets/index-f71f9709.js"></script>
+  <link rel="stylesheet" href="./assets/gui-dnd.css">
+</head>
+<body>
+  <div id="viewer">
+    <div id="drop-zone" style="
+      position: absolute; inset:0;
+      background: rgba(50,50,50,0.35);
+      border: 3px dashed #fff;
+      border-radius: 20px;
+      z-index: 10;
+      display: none;
+      pointer-events: none;
+    "></div>
+    <div id="drop-message">
+      Glisser & Déposer votre modèle .glb<br>
+      (Drag & Drop your .glb model)
+    </div>
+  </div>
+  <div id="scale-bar">
+    <div id="scale-bar-bar" style="height:4px;background:#fff;border-radius:2px;width:80px;margin-right:8px;"></div>
+    <span id="scale-bar-label" style="color:#fff;font:15px Arial, sans-serif;"></span>
+  </div>
+<div id="tool-panel"></div>
+  
+</body>
+</html>
